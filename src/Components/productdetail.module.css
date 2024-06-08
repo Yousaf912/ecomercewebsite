@@ -1,0 +1,15 @@
+.imgcls{
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+}
+.detailsdiv{
+    height: 800px;
+}
+.mrimg{
+    width: 100px;
+    height: 100px;
+}
+.uldiv{
+    width: 50%;
+}

@@ -1,0 +1,15 @@
+.hedr{
+   background-color: #86cfd9;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.bg{
+    background-color: #19575d ;
+}
+
+.bg:hover{
+    cursor: pointer;
+}
