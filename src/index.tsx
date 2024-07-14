@@ -36,7 +36,7 @@ const allroutes = createBrowserRouter([
     element:<Faqs></Faqs>
   },
   {
-    path:'/:id',
+    path:'/allproducts/:id',
     element:<Productsdetails></Productsdetails>
   },
   {

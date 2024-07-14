@@ -4,7 +4,7 @@ import style from './productdetail.module.css';
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { MdLocalShipping } from "react-icons/md";
 import { PiKeyReturn } from "react-icons/pi";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { Listprovider } from './store';
 import axios from 'axios';
 import { CgProfile } from "react-icons/cg";
@@ -18,13 +18,11 @@ export default function Productsdetails() {
     const [product, setproduct] = useState<any>([]);
     const[imgurl,setimgurl]=useState<string>('');
 
-    const location = useLocation();
-    const urlid = parseInt(location.pathname.split('/')[1]);
+    const urlid = useParams()
 
     const getsingledata = () => {
-        axios.get(`https://dummyjson.com/products/${urlid}`)
+        axios.get(`https://dummyjson.com/products/${urlid.id}`)
             .then((pro) => {
-                console.log(pro.data);
                 setproduct([pro.data]);
                 setimgurl(pro.data.thumbnail);
             }).catch((eror) => {

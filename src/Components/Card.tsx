@@ -8,12 +8,14 @@ export default function Card(props:{
 }) {
     
    const {product}=props;
+   console.log(product);
+   
     return (
         <>
             {product.map((val: any, i: any) => {
                 return (
                     <>
-                    <Link to={`/${val.id}`} className='text-decoration-none'>
+                    <Link to={`/allproducts/${val.id}`} className='text-decoration-none'>
                         <div className="card mt-2 shadow-lg" style={{ width: '18rem',  height:'30rem' }} >
                             <img src={val.thumbnail} className="card-img-top" alt="..." />
                             <div className="card-body">
